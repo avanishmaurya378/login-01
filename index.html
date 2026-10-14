@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Production Monitoring System | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="visual-panel" aria-label="Production monitoring process overview">
+      <div class="brand-header">
+        <div class="brand-icon" aria-hidden="true">▥</div>
+        <div>
+          <h1>SMART FACTORY <span>• LIVE VISIBILITY</span></h1>
+        </div>
+      </div>
+      <a href="#loginsection" class="login-button" aria-label="Scroll down to login section">
+        <span class="login-btn-pulse" aria-hidden="true"></span>
+        <span class="login-btn-text">Click to Login</span>
+        <span class="login-btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 4v13m0 0l-5-5m5 5l5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </span>
+      </a>
+      <div class="process-grid d-grid">
+        <!-- Step 1 -->
+        <article class="process-card step-1" data-step="1">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="IoT Daily Production Illustration">
+              <defs>
+                <linearGradient id="p1-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#e8f3ff" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+                <linearGradient id="p1-mach" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#1e5f9e" />
+                  <stop offset="100%" stop-color="#0f3c69" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p1-sky)" stroke="#0284c7" stroke-width="3.5" />
+              <line x1="20" y1="108" x2="180" y2="108" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+              <!-- Machine Base -->
+              <rect x="24" y="50" width="46" height="56" rx="5" fill="url(#p1-mach)" stroke="#0a2a4c"
+                stroke-width="1.5" />
+              <!-- Machine Screen -->
+              <rect x="30" y="56" width="34" height="22" rx="3" fill="#032644" />
+              <rect x="32" y="58" width="30" height="18" rx="2" fill="#38bdf8" opacity="0.95" />
+              <path d="M 34 68 Q 39 61 44 68 T 53 68 T 60 68" fill="none" stroke="#042742" stroke-width="1.8" />
+              <!-- Machine Status Lights -->
+              <circle cx="32" cy="86" r="2.8" fill="#22c55e" class="pulse-dot" />
+              <circle cx="41" cy="86" r="2.8" fill="#eab308" />
+              <circle cx="50" cy="86" r="2.8" fill="#ef4444" />
+              <line x1="31" y1="94" x2="62" y2="94" stroke="#475569" stroke-width="1.5" />
+              <line x1="31" y1="98" x2="62" y2="98" stroke="#475569" stroke-width="1.5" />
+              <!-- Antenna & WiFi Waves -->
+              <line x1="47" y1="50" x2="47" y2="38" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="47" cy="37" r="2.5" fill="#0284c7" />
+              <g class="wifi-waves">
+                <path d="M 38 33 A 12 12 0 0 1 56 33" fill="none" stroke="#0284c7" stroke-width="2.2"
+                  stroke-linecap="round" />
+                <path d="M 33 27 A 18 18 0 0 1 61 27" fill="none" stroke="#0ea5e9" stroke-width="2.2"
+                  stroke-linecap="round" />
+                <path d="M 28 21 A 24 24 0 0 1 66 21" fill="none" stroke="#38bdf8" stroke-width="2.2"
+                  stroke-linecap="round" />
+              </g>
+              <!-- Data Wire to IoT Cloud -->
+              <path d="M 70 65 C 88 65 90 46 112 46" fill="none" stroke="#0284c7" stroke-width="2"
+                stroke-dasharray="3 2" class="data-cable" />
+              <!-- IoT Cloud -->
+              <g class="floating-iot">
+                <rect x="110" y="22" width="46" height="26" rx="13" fill="#0284c7" stroke="#7dd3fc"
+                  stroke-width="1.5" />
+                <circle cx="118" cy="28" r="9" fill="#0284c7" />
+                <circle cx="132" cy="20" r="11" fill="#0284c7" />
+                <circle cx="144" cy="27" r="8" fill="#0284c7" />
+                <text x="133" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="900"
+                  fill="#ffffff" text-anchor="middle">IoT</text>
+              </g>
+              <!-- Connection to Server / DB -->
+              <path d="M 133 46 L 133 60" fill="none" stroke="#0284c7" stroke-width="2" stroke-dasharray="2 2" />
+              <!-- Server / Database Cylinder -->
+              <g transform="translate(138, 64)">
+                <ellipse cx="18" cy="8" rx="18" ry="7" fill="#0284c7" />
+                <path d="M 0 8 L 0 35 A 18 7 0 0 0 36 35 L 36 8 Z" fill="#075985" />
+                <ellipse cx="18" cy="20" rx="18" ry="6" fill="#0284c7" stroke="#38bdf8" stroke-width="1" />
+                <ellipse cx="18" cy="34" rx="18" ry="6" fill="#0284c7" stroke="#38bdf8" stroke-width="1" />
+                <circle cx="7" cy="19" r="2.2" fill="#22c55e" class="pulse-dot" />
+                <circle cx="13" cy="19" r="2.2" fill="#38bdf8" />
+                <circle cx="7" cy="33" r="2.2" fill="#22c55e" class="pulse-dot" />
+                <circle cx="13" cy="33" r="2.2" fill="#38bdf8" />
+              </g>
+              <!-- Data Box Gateway -->
+              <rect x="88" y="70" width="30" height="24" rx="3" fill="#0f172a" stroke="#0ea5e9" stroke-width="1.5" />
+              <circle cx="94" cy="77" r="2" fill="#22c55e" />
+              <circle cx="102" cy="77" r="2" fill="#38bdf8" />
+              <circle cx="110" cy="77" r="2" fill="#eab308" />
+              <line x1="92" y1="86" x2="114" y2="86" stroke="#475569" stroke-width="2" />
+              <path d="M 70 82 L 88 82" fill="none" stroke="#0ea5e9" stroke-width="2" />
+              <path d="M 118 82 L 138 82" fill="none" stroke="#0ea5e9" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">1</div>
+            <h3 class="step-title">IoT Daily Production and Machine Running Time</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Machine ID / Name</li>
+              <li><span class="bullet-dot"></span>Daily Production</li>
+              <li><span class="bullet-dot"></span>Running Time (Start / Stop)</li>
+              <li><span class="bullet-dot"></span>Machine Status</li>
+            </ul>
+          </div>
+          <div class="card-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="process-card step-2" data-step="2">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Actual Production Illustration">
+              <defs>
+                <linearGradient id="p2-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#edfbf2" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+                <linearGradient id="p2-conveyor" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#16a34a" />
+                  <stop offset="100%" stop-color="#15803d" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p2-sky)" stroke="#16a34a" stroke-width="3.5" />
+              <line x1="20" y1="108" x2="180" y2="108" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+              <!-- Monitor on Stand -->
+              <g transform="translate(32, 16)">
+                <rect x="0" y="0" width="46" height="34" rx="4" fill="#0f172a" stroke="#16a34a" stroke-width="2" />
+                <rect x="3" y="3" width="40" height="28" rx="2" fill="#f0fdf4" />
+                <rect x="7" y="18" width="5" height="10" rx="1" fill="#16a34a" class="bar-pulse" />
+                <rect x="15" y="10" width="5" height="18" rx="1" fill="#0284c7" class="bar-pulse" />
+                <rect x="23" y="6" width="5" height="22" rx="1" fill="#16a34a" class="bar-pulse" />
+                <rect x="31" y="13" width="5" height="15" rx="1" fill="#f59e0b" class="bar-pulse" />
+                <path d="M 8 16 Q 16 8 24 5 T 34 11" fill="none" stroke="#ef4444" stroke-width="1.5" />
+                <path d="M 23 34 L 23 44 M 14 44 L 32 44" stroke="#334155" stroke-width="3" stroke-linecap="round" />
+              </g>
+              <!-- Mini Data Table Machine | Item -->
+              <g transform="translate(104, 16)">
+                <rect x="0" y="0" width="74" height="49" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" />
+                <rect x="0" y="0" width="74" height="14" rx="4" fill="#0284c7" />
+                <text x="18" y="10" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800"
+                  fill="#ffffff" text-anchor="middle">Machine</text>
+                <line x1="37" y1="0" x2="37" y2="49" stroke="#cbd5e1" stroke-width="1" />
+                <text x="56" y="10" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800"
+                  fill="#ffffff" text-anchor="middle">Item</text>
+                <line x1="0" y1="14" x2="74" y2="14" stroke="#cbd5e1" stroke-width="1" />
+                <text x="18" y="24" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">M-01</text>
+                <text x="56" y="24" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">A-001</text>
+                <line x1="0" y1="26" x2="74" y2="26" stroke="#f1f5f9" stroke-width="1" />
+                <text x="18" y="35" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">M-02</text>
+                <text x="56" y="35" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">A-002</text>
+                <line x1="0" y1="37" x2="74" y2="37" stroke="#f1f5f9" stroke-width="1" />
+                <text x="18" y="46" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">M-03</text>
+                <text x="56" y="46" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">A-003</text>
+              </g>
+              <!-- Conveyor Belt Assembly -->
+              <g transform="translate(18, 70)">
+                <rect x="0" y="14" width="104" height="15" rx="7.5" fill="url(#p2-conveyor)" stroke="#14532d"
+                  stroke-width="1.5" />
+                <circle cx="10" cy="21.5" r="4.5" fill="#ffffff" stroke="#14532d" stroke-width="1.5" />
+                <circle cx="31" cy="21.5" r="4.5" fill="#ffffff" stroke="#14532d" stroke-width="1.5" />
+                <circle cx="52" cy="21.5" r="4.5" fill="#ffffff" stroke="#14532d" stroke-width="1.5" />
+                <circle cx="73" cy="21.5" r="4.5" fill="#ffffff" stroke="#14532d" stroke-width="1.5" />
+                <circle cx="94" cy="21.5" r="4.5" fill="#ffffff" stroke="#14532d" stroke-width="1.5" />
+                <rect x="14" y="29" width="6" height="12" fill="#334155" rx="1" />
+                <rect x="84" y="29" width="6" height="12" fill="#334155" rx="1" />
+                <g class="conveyor-items">
+                  <path d="M 20 4 L 20 14 L 32 14 L 32 4 L 28 4 L 28 1 L 24 1 L 24 4 Z" fill="#e0f2fe" stroke="#0284c7"
+                    stroke-width="1.2" />
+                  <rect x="23" y="7" width="6" height="5" fill="#38bdf8" rx="1" />
+                  <path d="M 44 4 L 44 14 L 56 14 L 56 4 L 52 4 L 52 1 L 48 1 L 48 4 Z" fill="#e0f2fe" stroke="#0284c7"
+                    stroke-width="1.2" />
+                  <rect x="47" y="7" width="6" height="5" fill="#38bdf8" rx="1" />
+                  <path d="M 68 4 L 68 14 L 80 14 L 80 4 L 76 4 L 76 1 L 72 1 L 72 4 Z" fill="#e0f2fe" stroke="#0284c7"
+                    stroke-width="1.2" />
+                  <rect x="71" y="7" width="6" height="5" fill="#38bdf8" rx="1" />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">2</div>
+            <h3 class="step-title">Actual Production Machine and Item Wise</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Machine Wise</li>
+              <li><span class="bullet-dot"></span>Item / Product Wise</li>
+              <li><span class="bullet-dot"></span>Production Qty</li>
+            </ul>
+          </div>
+          <div class="card-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="process-card step-3" data-step="3">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Quality Control Illustration">
+              <defs>
+                <linearGradient id="p3-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#fff8ed" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p3-sky)" stroke="#f59e0b" stroke-width="3.5" />
+              <!-- Inspection Clipboard -->
+              <g transform="translate(28, 20)">
+                <rect x="0" y="4" width="58" height="82" rx="6" fill="#0284c7" stroke="#0369a1" stroke-width="2" />
+                <rect x="18" y="0" width="22" height="9" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.5" />
+                <circle cx="29" cy="4" r="2" fill="#475569" />
+                <rect x="5" y="10" width="48" height="72" rx="3" fill="#ffffff" />
+                <path d="M 11 23 L 15 27 L 24 18" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <line x1="28" y1="22" x2="47" y2="22" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+                <path d="M 11 38 L 15 42 L 24 33" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <line x1="28" y1="37" x2="47" y2="37" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+                <path d="M 12 49 L 22 59 M 22 49 L 12 59" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="28" y1="54" x2="47" y2="54" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+                <line x1="12" y1="68" x2="47" y2="68" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+                <line x1="12" y1="74" x2="38" y2="74" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+              </g>
+              <!-- Accepted Qty Pill Badge -->
+              <g transform="translate(100, 26)" class="badge-pop">
+                <rect x="0" y="0" width="80" height="28" rx="14" fill="#22c55e" stroke="#16a34a" stroke-width="1.5" />
+                <circle cx="14" cy="14" r="10" fill="#15803d" />
+                <path d="M 10 14 L 13 17 L 19 11" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <text x="27" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800"
+                  fill="#ffffff">Accepted</text>
+                <text x="27" y="25" font-family="'Inter', sans-serif" font-size="6.5" font-weight="700"
+                  fill="#dcfce7">Qty</text>
+              </g>
+              <!-- Rejected Qty Pill Badge -->
+              <g transform="translate(100, 62)" class="badge-pop">
+                <rect x="0" y="0" width="80" height="28" rx="14" fill="#ef4444" stroke="#dc2626" stroke-width="1.5" />
+                <circle cx="14" cy="14" r="10" fill="#b91c1c" />
+                <path d="M 10 10 L 18 18 M 18 10 L 10 18" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" />
+                <text x="27" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800"
+                  fill="#ffffff">Rejected</text>
+                <text x="27" y="25" font-family="'Inter', sans-serif" font-size="6.5" font-weight="700"
+                  fill="#fee2e2">Qty</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">3</div>
+            <h3 class="step-title">Quality Accepted &amp; Rejected Qty</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Accepted Qty</li>
+              <li><span class="bullet-dot"></span>Rejected Qty</li>
+              <li><span class="bullet-dot"></span>Rejection Reason (optional)</li>
+            </ul>
+          </div>
+          <div class="row-turn-indicator" aria-hidden="true" title="Process continues to Step 4">
+            <span>Next Phase</span>
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </article>
+
+        <!-- Step 4 -->
+        <article class="process-card step-4" data-step="4">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Real Time FG Stock Illustration">
+              <defs>
+                <linearGradient id="p4-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f6efff" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+                <linearGradient id="p4-roof" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#6366f1" />
+                  <stop offset="100%" stop-color="#4338ca" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p4-sky)" stroke="#7c3aed" stroke-width="3.5" />
+              <!-- Warehouse Structure -->
+              <g transform="translate(24, 18)">
+                <polygon points="12,30 45,6 78,30 78,87 12,87" fill="#f8fafc" stroke="#475569" stroke-width="2" />
+                <polygon points="5,32 45,0 85,32 75,34 45,9 15,34" fill="url(#p4-roof)" stroke="#312e81"
+                  stroke-width="1.5" />
+                <rect x="10" y="30" width="70" height="5" fill="#4338ca" />
+                <!-- Open Door -->
+                <rect x="25" y="42" width="40" height="45" fill="#1e293b" rx="2" />
+                <rect x="23" y="38" width="44" height="8" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="1" />
+                <line x1="25" y1="41" x2="65" y2="41" stroke="#cbd5e1" stroke-width="1" />
+                <line x1="25" y1="44" x2="65" y2="44" stroke="#cbd5e1" stroke-width="1" />
+                <!-- Boxes inside -->
+                <rect x="29" y="82" width="32" height="4" fill="#d97706" rx="1" />
+                <rect x="30" y="67" width="14" height="15" rx="1" fill="#f59e0b" stroke="#b45309" stroke-width="1" />
+                <line x1="30" y1="74" x2="44" y2="74" stroke="#d97706" stroke-width="1.5" />
+                <rect x="46" y="67" width="14" height="15" rx="1" fill="#f59e0b" stroke="#b45309" stroke-width="1" />
+                <line x1="46" y1="74" x2="60" y2="74" stroke="#d97706" stroke-width="1.5" />
+                <rect x="38" y="54" width="14" height="14" rx="1" fill="#fbbf24" stroke="#b45309" stroke-width="1" />
+                <line x1="38" y1="60" x2="52" y2="60" stroke="#d97706" stroke-width="1.5" />
+              </g>
+              <!-- Pallet Stack Outside -->
+              <g transform="translate(108, 62)">
+                <rect x="0" y="38" width="38" height="5" fill="#d97706" rx="1" />
+                <rect x="2" y="24" width="16" height="14" rx="1" fill="#f59e0b" stroke="#b45309" stroke-width="1" />
+                <line x1="2" y1="31" x2="18" y2="31" stroke="#b45309" stroke-width="1" />
+                <rect x="20" y="24" width="16" height="14" rx="1" fill="#f59e0b" stroke="#b45309" stroke-width="1" />
+                <line x1="20" y1="31" x2="36" y2="31" stroke="#b45309" stroke-width="1" />
+                <rect x="11" y="10" width="16" height="14" rx="1" fill="#fbbf24" stroke="#b45309" stroke-width="1" />
+                <line x1="11" y1="17" x2="27" y2="17" stroke="#b45309" stroke-width="1" />
+              </g>
+              <!-- Analytics Card -->
+              <g transform="translate(122, 22)">
+                <rect x="0" y="0" width="56" height="38" rx="4" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5" />
+                <path d="M 6 28 L 16 22 L 28 25 L 38 12 L 48 8" fill="none" stroke="#22c55e" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="48" cy="8" r="3" fill="#22c55e" class="pulse-dot" />
+                <line x1="6" y1="32" x2="50" y2="32" stroke="#334155" stroke-width="1" />
+                <rect x="8" y="28" width="3" height="4" fill="#6366f1" />
+                <rect x="18" y="25" width="3" height="7" fill="#6366f1" />
+                <rect x="28" y="22" width="3" height="10" fill="#6366f1" />
+              </g>
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">4</div>
+            <h3 class="step-title">Real Time FG Stock</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Item Wise</li>
+              <li><span class="bullet-dot"></span>Batch Wise</li>
+              <li><span class="bullet-dot"></span>Available Qty</li>
+            </ul>
+          </div>
+          <div class="card-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </article>
+
+        <!-- Step 5 -->
+        <article class="process-card step-5" data-step="5">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Customer Wise Dispatch Illustration">
+              <defs>
+                <linearGradient id="p5-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#edf9fc" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p5-sky)" stroke="#0891b2" stroke-width="3.5" />
+              <!-- Customer Avatar Badge -->
+              <g transform="translate(114, 10)">
+                <circle cx="20" cy="18" r="16" fill="#0284c7" />
+                <circle cx="20" cy="14" r="4.5" fill="#ffffff" />
+                <path d="M 13 26 A 7 7 0 0 1 27 26 Z" fill="#ffffff" />
+                <circle cx="12" cy="16" r="3.2" fill="#bae6fd" />
+                <path d="M 7 26 A 5 5 0 0 1 17 26 Z" fill="#bae6fd" />
+                <circle cx="28" cy="16" r="3.2" fill="#bae6fd" />
+                <path d="M 23 26 A 5 5 0 0 1 33 26 Z" fill="#bae6fd" />
+              </g>
+              <!-- Customer Wise Table -->
+              <g transform="translate(98, 46)">
+                <rect x="0" y="0" width="78" height="52" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" />
+                <rect x="0" y="0" width="78" height="15" rx="4" fill="#0891b2" />
+                <text x="39" y="11" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="800"
+                  fill="#ffffff" text-anchor="middle">Customer Wise</text>
+                <text x="18" y="26" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">C-001</text>
+                <line x1="38" y1="15" x2="38" y2="52" stroke="#cbd5e1" stroke-width="1" />
+                <text x="58" y="26" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#0284c7"
+                  text-anchor="middle">1,000</text>
+                <line x1="0" y1="28" x2="78" y2="28" stroke="#f1f5f9" stroke-width="1" />
+                <text x="18" y="38" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">C-002</text>
+                <text x="58" y="38" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#0284c7"
+                  text-anchor="middle">2,500</text>
+                <line x1="0" y1="40" x2="78" y2="40" stroke="#f1f5f9" stroke-width="1" />
+                <text x="18" y="49" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#334155"
+                  text-anchor="middle">C-003</text>
+                <text x="58" y="49" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#0284c7"
+                  text-anchor="middle">750</text>
+              </g>
+              <!-- Logistics Delivery Truck -->
+              <g transform="translate(16, 52)" class="truck-motion">
+                <line x1="0" y1="12" x2="11" y2="12" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round"
+                  class="speed-line-1" />
+                <line x1="4" y1="20" x2="17" y2="20" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"
+                  class="speed-line-2" />
+                <line x1="1" y1="28" x2="13" y2="28" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round"
+                  class="speed-line-3" />
+                <rect x="18" y="6" width="38" height="28" rx="2" fill="#0284c7" stroke="#0369a1" stroke-width="1.5" />
+                <line x1="18" y1="20" x2="56" y2="20" stroke="#0369a1" stroke-width="1" />
+                <path d="M 56 14 L 66 14 L 74 22 L 74 34 L 56 34 Z" fill="#0284c7" stroke="#0369a1"
+                  stroke-width="1.5" />
+                <path d="M 64 16 L 71 23 L 64 23 Z" fill="#e0f2fe" />
+                <rect x="73" y="29" width="3" height="4" fill="#eab308" rx="1" />
+                <circle cx="28" cy="35" r="6" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+                <circle cx="28" cy="35" r="2.5" fill="#cbd5e1" />
+                <circle cx="66" cy="35" r="6" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+                <circle cx="66" cy="35" r="2.5" fill="#cbd5e1" />
+                <line x1="10" y1="41" x2="78" y2="41" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3 3" />
+              </g>
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">5</div>
+            <h3 class="step-title">Dispatch Qty Customer Wise</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Customer Name</li>
+              <li><span class="bullet-dot"></span>Item / Product</li>
+              <li><span class="bullet-dot"></span>Dispatch Qty</li>
+              <li><span class="bullet-dot"></span>Dispatch Date</li>
+            </ul>
+          </div>
+          <div class="card-connector" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+        </article>
+
+        <!-- Step 6 -->
+        <article class="process-card step-6" data-step="6">
+          <div class="card-arch">
+            <svg class="arch-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg"
+              aria-label="Balanced FG Stock Illustration">
+              <defs>
+                <linearGradient id="p6-sky" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#edfbf2" />
+                  <stop offset="100%" stop-color="#ffffff" />
+                </linearGradient>
+              </defs>
+              <path d="M 12 120 A 88 88 0 0 1 188 120 Z" fill="url(#p6-sky)" stroke="#15803d" stroke-width="3.5" />
+              <!-- Green Check Badge -->
+              <g transform="translate(136, 10)">
+                <circle cx="16" cy="16" r="14" fill="#22c55e" stroke="#15803d" stroke-width="2" />
+                <path d="M 10 16 L 14 20 L 22 12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <!-- Pallet Stack -->
+              <g transform="translate(16, 40)">
+                <rect x="0" y="45" width="62" height="7" fill="#d97706" rx="1.5" />
+                <rect x="6" y="52" width="8" height="4" fill="#92400e" rx="1" />
+                <rect x="27" y="52" width="8" height="4" fill="#92400e" rx="1" />
+                <rect x="48" y="52" width="8" height="4" fill="#92400e" rx="1" />
+                <rect x="4" y="24" width="24" height="21" rx="2" fill="#d97706" stroke="#92400e" stroke-width="1.2" />
+                <line x1="4" y1="34" x2="28" y2="34" stroke="#92400e" stroke-width="1.2" />
+                <line x1="16" y1="24" x2="16" y2="34" stroke="#b45309" stroke-width="1" />
+                <rect x="31" y="24" width="24" height="21" rx="2" fill="#d97706" stroke="#92400e" stroke-width="1.2" />
+                <line x1="31" y1="34" x2="55" y2="34" stroke="#92400e" stroke-width="1.2" />
+                <line x1="43" y1="24" x2="43" y2="34" stroke="#b45309" stroke-width="1" />
+                <rect x="8" y="2" width="22" height="22" rx="2" fill="#f59e0b" stroke="#92400e" stroke-width="1.2" />
+                <line x1="8" y1="13" x2="30" y2="13" stroke="#b45309" stroke-width="1.2" />
+                <line x1="19" y1="2" x2="19" y2="13" stroke="#b45309" stroke-width="1" />
+                <rect x="33" y="5" width="20" height="19" rx="2" fill="#fbbf24" stroke="#92400e" stroke-width="1.2" />
+                <line x1="33" y1="14" x2="53" y2="14" stroke="#b45309" stroke-width="1.2" />
+              </g>
+              <!-- Balanced Stock Card -->
+              <g transform="translate(96, 40)">
+                <rect x="0" y="0" width="84" height="58" rx="4" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" />
+                <rect x="0" y="0" width="84" height="16" rx="4" fill="#15803d" />
+                <text x="42" y="11" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="800"
+                  fill="#ffffff" text-anchor="middle">Balanced Stock</text>
+                <text x="6" y="27" font-family="'Inter', sans-serif" font-size="6.5" font-weight="600" fill="#334155">FG
+                  In Stock</text>
+                <text x="76" y="27" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#0284c7"
+                  text-anchor="end">5,250</text>
+                <line x1="0" y1="30" x2="84" y2="30" stroke="#f1f5f9" stroke-width="1" />
+                <text x="6" y="39" font-family="'Inter', sans-serif" font-size="6.5" font-weight="600"
+                  fill="#334155">Dispatched</text>
+                <text x="76" y="39" font-family="'Inter', sans-serif" font-size="7" font-weight="700" fill="#ea580c"
+                  text-anchor="end">4,100</text>
+                <line x1="0" y1="42" x2="84" y2="42" stroke="#f1f5f9" stroke-width="1" />
+                <text x="6" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="800"
+                  fill="#15803d">Balance</text>
+                <text x="76" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="900"
+                  fill="#15803d" text-anchor="end">1,150</text>
+              </g>
+            </svg>
+          </div>
+          <div class="card-header-bar">
+            <div class="step-badge">6</div>
+            <h3 class="step-title">Balanced FG Stock Qty</h3>
+          </div>
+          <div class="card-body">
+            <ul class="step-features">
+              <li><span class="bullet-dot"></span>Total FG Stock</li>
+              <li><span class="bullet-dot"></span>Dispatched Qty</li>
+              <li><span class="bullet-dot"></span>Balance Stock Qty</li>
+            </ul>
+          </div>
+          <div class="card-complete-badge" aria-hidden="true" title="Manufacturing process cycle verified">
+            ✓ Done
+          </div>
+        </article>
+      </div>
+
+      <!-- Connected Process Pipeline -->
+      <div class="flow-line" aria-label="Manufacturing Process Flow Pipeline">
+        <div class="flow-step"><span class="flow-num">1</span> IoT Production</div>
+        <span class="flow-arrow-icon">→</span>
+        <div class="flow-step"><span class="flow-num">2</span> Actual Output</div>
+        <span class="flow-arrow-icon">→</span>
+        <div class="flow-step"><span class="flow-num">3</span> Quality Control</div>
+        <span class="flow-arrow-icon">→</span>
+        <div class="flow-step"><span class="flow-num">4</span> Real-Time Stock</div>
+        <span class="flow-arrow-icon">→</span>
+        <div class="flow-step"><span class="flow-num">5</span> Dispatch</div>
+        <span class="flow-arrow-icon">→</span>
+        <div class="flow-step"><span class="flow-num">6</span> Balanced FG</div>
+      </div>
+      <footer class="visual-footer"><span class="live-dot"></span> One connected continuous view from machine to
+        customer dispatch</footer>
+    </section>
+
+    <aside class="login-panel" id="loginsection">
+      <div class="login-box">
+        <div class="text-center">
+          <p class="eyebrow login-eyebrow">WELCOME BACK</p>
+          <h1>Production <span>Monitoring System</span></h1>
+          <p class="tagline">Real-time Data <b>•</b> Better Visibility <b>•</b> Higher Efficiency</p>
+          <h5>Sign in to your account</h5>
+        </div>
+
+        <form action="#" method="post">
+          <label for="username">Username or email</label>
+          <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username"
+            required />
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password"
+            autocomplete="current-password" required />
+          <div class="form-options"><label class="remember"><input type="checkbox" name="remember" /> Remember
+              me</label><a href="#forgot-password">Forgot password?</a></div>
+          <button type="submit" class="sign-button">Sign In <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="secure-note">🔒 Secure access for authorized users only</p>
+      </div>
+      <div class="login-bottom">PRODUCTION MONITORING SYSTEM <span>•</span> v1.0</div>
+    </aside>
+  </main>
+</body>
+
+</html>
